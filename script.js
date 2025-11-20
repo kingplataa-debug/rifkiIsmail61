@@ -50,7 +50,7 @@ document.querySelectorAll('.btn-buy').forEach(button => {
     const productName = this.getAttribute('data-product');
     const productPrice = this.getAttribute('data-price');
     
-    const message = `Misi Bang Mau Beli ${productName}%0AHarga: Rp ${parseInt(productPrice).toLocaleString('id-ID')}%0A%0AFlm Ready Kah?`;
+    const message = `Misi Bang Mau Beli ${productName}%0AHarga: Rp ${parseInt(productPrice).toLocaleString('id-ID')}%0A%0AReady Kah?`;
     
     window.open(`https://wa.me/6282396835482?text=${message}`, '_blank');
   });
