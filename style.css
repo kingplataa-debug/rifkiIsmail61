@@ -1,27 +1,47 @@
+/* ==================================== */
+/* 🎨 SKEMA WARNA: DEEP BLACK PROFESSIONAL */
+/* ==================================== */
+/* Latar Belakang Utama: #0A0A0A (Hitam Pekat) */
+/* Aksen Primer (Biru Premium): #008CFF */
+/* Konten/Card: #1F1F1F (Abu-abu sangat gelap) */
+/* Teks Utama: #FAFAFA (Putih sangat terang) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font style iOS-like / Sistem Font Profesional */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    -webkit-font-smoothing: antialiased; /* Teks lebih halus */
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
+    /* LATAR BELAKANG FOTO ELEGAN (HARAP GANTI URL INI) */
+    background-image: url('path/to/your/elegant-dark-background-image.jpg'); /* GANTI DENGAN PATH FOTO ANDA */
+    background-color: #0A0A0A; /* Warna fallback: Deep Black */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #FAFAFA; /* Teks Utama Putih Bersih */
     line-height: 1.6;
+    min-height: 100vh;
 }
 
+/* ================== */
+/* HEADER & NAVBAR */
+/* ================== */
 .navbar {
-    background-color: #ffffff;
-    padding: 15px 5%;
+    background-color: #1F1F1F; /* Card warna gelap */
+    padding: 18px 5%;
     display: flex;
     align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #eaeaea;
+    /* Bayangan lebih halus untuk dark mode */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #333; /* Border tipis untuk pemisah */
 }
 
 .logo {
@@ -30,9 +50,9 @@ body {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
 }
 
 .logo-icon img {
@@ -42,50 +62,62 @@ body {
 }
 
 .logo-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FAFAFA;
+    letter-spacing: -0.5px;
 }
 
+/* ================== */
+/* MAIN CONTENT */
+/* ================== */
 .container {
     max-width: 1200px;
-    margin: 80px auto 100px;
+    margin: 100px auto 120px;
     padding: 0 20px;
 }
 
 .content-section {
     display: none;
-    padding: 40px 30px;
-    background-color: #ffffff;
+    padding: 50px 40px;
+    background-color: #1F1F1F; /* Card warna gelap */
     border-radius: 12px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eaeaea;
+    /* Bayangan yang menonjol dan dalam */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
 }
 
 .active-section {
     display: block;
 }
 
+/* ================== */
+/* DASHBOARD INTRO */
+/* ================== */
 .dashboard-intro {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .dashboard-intro h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 20px;
-    color: #4a6cf7;
+    color: #008CFF; /* Aksen Biru Premium */
+    font-weight: 700;
 }
 
 .dashboard-intro p {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
-    color: #666;
+    color: #C0C0C0; /* Abu-abu terang untuk deskripsi */
     line-height: 1.8;
 }
 
+/* ================== */
+/* FEATURE CARD */
+/* ================== */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -94,13 +126,13 @@ body {
 }
 
 .feature-card {
-    background-color: #ffffff;
-    padding: 30px 25px;
+    background-color: #1F1F1F;
+    padding: 35px 30px;
     border-radius: 12px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #eaeaea;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -108,25 +140,26 @@ body {
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    background-color: #2A2A2A; /* Sedikit lebih terang saat hover */
 }
 
 .feature-icon {
-    font-size: 48px;
-    color: #4a6cf7;
-    margin-bottom: 20px;
+    font-size: 52px;
+    color: #008CFF; /* Aksen Biru Premium */
+    margin-bottom: 25px;
 }
 
 .feature-card h3 {
     margin-bottom: 15px;
-    color: #333;
-    font-size: 22px;
+    color: #FAFAFA;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .feature-card p {
-    color: #666;
+    color: #C0C0C0;
     line-height: 1.7;
     flex-grow: 1;
 }
@@ -134,49 +167,55 @@ body {
 .section-title {
     text-align: center;
     margin-bottom: 40px;
-    color: #333;
-    font-size: 32px;
-    font-weight: 600;
+    color: #FAFAFA;
+    font-size: 36px;
+    font-weight: 700;
 }
 
+/* ================== */
+/* PRODUCT CARD */
+/* ================== */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     justify-items: center;
 }
 
 .product-card {
-    background-color: #ffffff;
+    background-color: #1F1F1F;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #eaeaea;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 .product-image {
-    height: 180px;
-    background: linear-gradient(135deg, #4a6cf7, #6c63ff);
+    height: 200px;
+    /* Gradasi Biru Premium */
+    background: linear-gradient(135deg, #008CFF, #0056b3);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 60px;
+    font-weight: 700;
     color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .product-info {
-    padding: 25px 20px;
+    padding: 30px 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -184,42 +223,42 @@ body {
 }
 
 .product-title {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 12px;
-    color: #333;
+    color: #FAFAFA;
     font-weight: 600;
     line-height: 1.4;
 }
 
 .product-price {
-    font-size: 20px;
-    color: #4a6cf7;
+    font-size: 22px;
+    color: #008CFF; /* Biru Premium */
     margin-bottom: 8px;
     font-weight: bold;
 }
 
 .product-sold {
-    font-size: 14px;
-    color: #666;
+    font-size: 15px;
+    color: #C0C0C0;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .product-sold::before {
-    content: "🛒";
-    font-size: 12px;
+    content: "🛍️";
+    font-size: 14px;
 }
 
 .product-actions {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     margin-top: auto;
 }
 
 .btn {
-    padding: 12px 16px;
+    padding: 14px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -229,87 +268,94 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .btn-play {
-    background-color: #f0f2f5;
-    color: #333;
-    border: 1px solid #ddd;
+    background-color: #333; /* Abu-abu tombol dark mode */
+    color: #FAFAFA;
+    border: 1px solid #444;
 }
 
 .btn-play:hover {
-    background-color: #e4e6e9;
+    background-color: #444;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .btn-buy {
-    background-color: #4a6cf7;
+    background-color: #008CFF; /* Biru Premium */
     color: #fff;
 }
 
 .btn-buy:hover {
-    background-color: #3a5ce5;
+    background-color: #0056b3;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 140, 255, 0.5);
 }
 
+/* ================== */
+/* REQUEST FORM */
+/* ================== */
 .request-container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 40px 35px;
+    background-color: #1F1F1F;
+    padding: 50px 45px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #eaeaea;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #333;
 }
 
 .request-logo {
-    font-size: 60px;
-    color: #4a6cf7;
-    margin-bottom: 25px;
+    font-size: 64px;
+    color: #008CFF;
+    margin-bottom: 30px;
 }
 
 .request-title {
-    font-size: 32px;
-    margin-bottom: 35px;
-    color: #333;
-    font-weight: 600;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #FAFAFA;
+    font-weight: 700;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 600;
-    color: #333;
-    font-size: 16px;
+    color: #FAFAFA;
+    font-size: 17px;
 }
 
 .form-control {
     width: 100%;
-    padding: 14px 16px;
+    padding: 16px 18px;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    color: #333;
+    border: 1px solid #444;
+    background-color: #2A2A2A; /* Warna input gelap */
+    color: #FAFAFA;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
     outline: none;
-    border-color: #4a6cf7;
-    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    border-color: #008CFF;
+    box-shadow: 0 0 0 4px rgba(0, 140, 255, 0.3);
+    background-color: #202020; /* Lebih gelap saat fokus */
 }
 
 .custom-style-input {
     display: none;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .custom-style-input.show {
@@ -317,30 +363,35 @@ body {
 }
 
 .btn-order {
-    background-color: #4a6cf7;
+    background-color: #008CFF;
     color: #fff;
-    padding: 14px 30px;
-    font-size: 16px;
+    padding: 16px 30px;
+    font-size: 18px;
     width: 100%;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 140, 255, 0.4);
 }
 
 .btn-order:hover {
-    background-color: #3a5ce5;
+    background-color: #0056b3;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 140, 255, 0.6);
 }
 
+/* ================== */
+/* FOOTER & NAVIGASI MOBILE */
+/* ================== */
 .footer-nav {
-    background-color: #ffffff;
+    background-color: #1F1F1F; /* Warna gelap untuk footer */
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 18px 0;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
-    border-top: 1px solid #eaeaea;
+    padding: 15px 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #333;
 }
 
 .nav-item {
@@ -348,20 +399,20 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    color: #8a8a9e;
-    transition: color 0.3s ease;
-    padding: 5px 15px;
-    border-radius: 8px;
+    color: #C0C0C0; /* Abu-abu terang untuk navigasi non-aktif */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 18px;
+    border-radius: 10px;
 }
 
 .nav-item.active {
-    color: #4a6cf7;
-    background-color: rgba(74, 108, 247, 0.08);
+    color: #008CFF; /* Biru Premium */
+    background-color: rgba(0, 140, 255, 0.15); /* Aksen biru muda */
 }
 
 .nav-icon {
-    font-size: 22px;
-    margin-bottom: 6px;
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .nav-text {
@@ -369,19 +420,22 @@ body {
     font-weight: 500;
 }
 
+/* ================== */
+/* AUDIO PLAYER */
+/* ================== */
 .audio-player {
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    width: 350px;
+    background-color: #1F1F1F;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+    width: 380px;
     z-index: 100;
-    border: 1px solid #eaeaea;
+    border: 1px solid #333;
 }
 
 .audio-player.active {
@@ -390,10 +444,10 @@ body {
 
 .audio-title {
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
-    color: #333;
-    font-weight: 500;
+    color: #FAFAFA;
+    font-weight: 600;
 }
 
 .audio-controls {
@@ -405,7 +459,7 @@ body {
 
 .audio-buttons {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
@@ -414,110 +468,116 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    color: #4a6cf7;
-    padding: 8px;
+    color: #008CFF;
+    padding: 10px;
     border-radius: 50%;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-}
-
-.audio-btn:hover {
-    background-color: rgba(74, 108, 247, 0.1);
-    transform: scale(1.1);
-}
-
-.audio-btn:active {
-    transform: scale(0.95);
-}
-
-.audio-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
-.play-btn {
-    background-color: #4a6cf7;
-    color: white;
     width: 45px;
     height: 45px;
 }
 
+.audio-btn:hover {
+    background-color: rgba(0, 140, 255, 0.15);
+    transform: scale(1.05);
+}
+
+.audio-btn:active {
+    transform: scale(0.98);
+}
+
+.audio-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.play-btn {
+    background-color: #008CFF;
+    color: white;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 140, 255, 0.4);
+}
+
 .play-btn:hover {
-    background-color: #3a5ce5;
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 .audio-progress {
     flex: 1;
-    height: 6px;
-    background-color: #eaeaea;
-    border-radius: 6px;
-    margin: 0 12px;
+    height: 8px;
+    background-color: #444;
+    border-radius: 8px;
+    margin: 0 15px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
 }
 
 .audio-progress:hover .audio-progress-bar {
-    background-color: #3a5ce5;
+    background-color: #0056b3;
 }
 
 .audio-progress-bar {
     height: 100%;
-    background-color: #4a6cf7;
+    background-color: #008CFF;
     width: 0%;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: width 0.1s linear, background-color 0.3s ease;
 }
 
 .audio-time {
-    font-size: 13px;
-    color: #8a8a9e;
+    font-size: 14px;
+    color: #C0C0C0;
     font-weight: 500;
-    min-width: 40px;
+    min-width: 45px;
 }
 
 .volume-control {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .volume-slider {
     flex: 1;
-    height: 4px;
-    background-color: #eaeaea;
-    border-radius: 4px;
+    height: 6px;
+    background-color: #444;
+    border-radius: 6px;
     outline: none;
     -webkit-appearance: none;
 }
 
 .volume-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background: #4a6cf7;
+    background: #008CFF;
     cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 .volume-slider::-moz-range-thumb {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background: #4a6cf7;
+    background: #008CFF;
     cursor: pointer;
     border: none;
 }
 
+/* ================== */
+/* MEDIA QUERIES (RESPONSIVE) */
+/* ================== */
 @media (max-width: 768px) {
     .container {
-        margin: 70px auto 100px;
+        margin: 80px auto 100px;
         padding: 0 15px;
     }
     
@@ -531,21 +591,25 @@ body {
     }
     
     .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 20px;
     }
     
     .dashboard-intro h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
     
     .section-title {
-        font-size: 28px;
+        font-size: 32px;
     }
     
+    .request-container {
+        padding: 40px 25px;
+    }
+
     .audio-player {
-        width: 320px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 90%;
+        max-width: 350px;
+        bottom: 90px;
     }
 }
